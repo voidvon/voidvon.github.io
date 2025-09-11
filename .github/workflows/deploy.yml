@@ -1,0 +1,59 @@
+# 工作流名称
+name: Build and Deploy to GitHub Pages
+
+# 触发条件：当代码推送到 main 分支时触发
+on:
+  push:
+    branches:
+      - main # 或者 master，根据你的主分支名称修改
+
+# 权限设置：允许此工作流写入内容
+permissions:
+  contents: write
+
+# 任务（Jobs）
+jobs:
+  build-and-deploy:
+    # 运行环境：使用最新的 Ubuntu
+    runs-on: ubuntu-latest
+
+    # 步骤（Steps）
+    steps:
+      # 步骤一：检出源代码
+      # 使用 actions/checkout@v4 拉取你的代码到 Actions 运行器中
+      - name: Checkout 🛎️
+        uses: actions/checkout@v4
+
+      # 步骤二：安装和配置 Node.js 环境
+      # 根据你的项目使用的 Node.js 版本进行修改
+      - name: Setup Node.js 🟩
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22" # 建议使用LTS版本，如 18, 20
+          cache: "npm" # 或者 yarn, pnpm
+
+      # 步骤三：安装项目依赖
+      - name: Install dependencies 👨🏻‍💻
+        run: npm install # 如果你用 yarn, 就是 yarn install; 如果用 pnpm, 就是 pnpm install
+
+      # 步骤四：执行构建脚本
+      # Vue/Vite 项目默认是 npm run build，会生成 dist 文件夹
+      - name: Build 🔨
+        run: npm run build
+
+      # 步骤五：部署到 voidfeng.github.io
+      - name: Deploy 🚀
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          # 使用我们之前配置的部署密钥
+          deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+          # 部署到的目标仓库
+          external_repository: voidfeng/voidfeng.github.io # 替换成你自己的
+          # 部署的目标分支
+          publish_branch: main # 或者 master
+          # 需要部署的文件夹
+          publish_dir: ./dist
+          # 提交信息
+          commit_message: ${{ github.event.head_commit.message }} # 使用源代码仓库的提交信息
+          # 防止旧文件残留
+          cname: "" # 如果你有自定义域名，请填写在这里，例如 docs.example.com
