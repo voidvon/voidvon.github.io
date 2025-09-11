@@ -24,5 +24,3 @@ features:
   - title: 📝 知识整理
     details: 系统化整理学习笔记，用 Markdown 记录技术心得，帮助自己和他人更好地理解技术概念
 ---
-
-<img src="/1.jpg" />

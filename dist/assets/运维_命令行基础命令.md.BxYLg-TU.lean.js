@@ -1,1 +1,0 @@
-import{_ as i,c as a,o as n,a1 as h}from"./chunks/framework.zgt7pDuW.js";const g=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"运维/命令行基础命令.md","filePath":"运维/命令行基础命令.md"}'),l={name:"运维/命令行基础命令.md"};function k(t,s,p,e,F,r){return n(),a("div",null,s[0]||(s[0]=[h("",10)]))}const y=i(l,[["render",k]]);export{g as __pageData,y as default};
