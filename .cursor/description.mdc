@@ -1,0 +1,10 @@
+---
+alwaysApply: true
+---
+
+这是 vitepress2 项目，但是它并非放在根目录，而是在 src 下。因为这是要放到 voidfeng.github.io 上，如果放在外层，那么文件就可以直接访问。
+启动和打包都需要切换到 src 目录再操作。
+
+目录结构：
+src: vitepress 的根目录
+src/.vitepress/config.mts: vitepress 的配置文件

@@ -2,6 +2,7 @@
 import { h } from 'vue'
 import type { Theme } from 'vitepress'
 import DefaultTheme from 'vitepress/theme'
+import CustomFooter from './components/CustomFooter.vue'
 import './style.css'
 
 export default {
@@ -9,9 +10,10 @@ export default {
   Layout: () => {
     return h(DefaultTheme.Layout, null, {
       // https://vitepress.dev/guide/extending-default-theme#layout-slots
+      'layout-bottom': () => h(CustomFooter)
     })
   },
   enhanceApp({ app, router, siteData }) {
-    // ...
+    // 注册全局组件或配置
   }
 } satisfies Theme

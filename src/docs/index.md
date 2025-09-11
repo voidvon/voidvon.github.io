@@ -3,23 +3,26 @@
 layout: home
 
 hero:
-  name: "jay feng blog"
-  text: "my blog."
-  tagline: My great project tagline
+  name: "Void Feng"
+  text: "技术笔记"
+  tagline: 分享前端开发、运维技术与编程心得
   actions:
     - theme: brand
-      text: Markdown Examples
-      link: /markdown-examples
+      text: 开始阅读
+      link: /JavaScript/ES6%20新增功能
     - theme: alt
-      text: API Examples
-      link: /api-examples
+      text: 关于我
+      link: /其它/聊天工具详细介绍
 
 features:
-  - title: Feature A
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature B
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature C
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+  - title: 🚀 前端技术
+    details: 深入学习 JavaScript ES6-ES13 新特性、Vue3+TypeScript 项目实践、Promise 异步编程等现代前端开发技术
+  - title: 🛠️ 开发工具
+    details: Git 版本控制、Vim 编辑器使用、项目打包部署等开发工具的实用技巧和最佳实践
+  - title: ⚙️ 运维技能
+    details: Linux 系统管理、PM2 进程管理、macOS 使用技巧等运维和系统管理相关知识分享
+  - title: 📝 知识整理
+    details: 系统化整理学习笔记，用 Markdown 记录技术心得，帮助自己和他人更好地理解技术概念
 ---
 
+<img src="/1.jpg" />
