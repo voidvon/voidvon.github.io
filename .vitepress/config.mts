@@ -1,7 +1,8 @@
 import { defineConfig } from 'vitepress'
 import { data as nav } from './nav.data'
 import { data as sidebar } from './sidebar.data'
-console.log(nav)
+import UnoCSS from 'unocss/vite'
+
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   srcDir: "docs",
@@ -11,7 +12,8 @@ export default defineConfig({
   description: "前端开发人员迈向全栈的笔记。",
   
   vite: {
-    publicDir: '../public' // 指定 public 目录路径
+    publicDir: '../public', // 指定 public 目录路径
+    plugins: [UnoCSS()]
   },
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config

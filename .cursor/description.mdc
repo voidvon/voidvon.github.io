@@ -1,0 +1,9 @@
+---
+alwaysApply: true
+---
+
+该项目是 Vitepress2 + unocss 开发的一个博客网站。
+
+## css
+
+优先使用 unocss 写样式

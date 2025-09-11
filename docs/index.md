@@ -3,8 +3,8 @@
 layout: home
 
 hero:
-  name: "Void Feng"
-  text: "技术笔记"
+  name: 'Void Feng'
+  text: '技术笔记'
   tagline: 分享前端开发、运维技术与编程心得
   actions:
     - theme: brand

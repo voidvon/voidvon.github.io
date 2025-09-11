@@ -4,6 +4,7 @@ import type { Theme } from 'vitepress'
 import DefaultTheme from 'vitepress/theme'
 import CustomFooter from './components/CustomFooter.vue'
 import './style.css'
+import 'virtual:uno.css'
 
 export default {
   extends: DefaultTheme,

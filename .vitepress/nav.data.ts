@@ -1,6 +1,5 @@
 import fs from 'fs'
 import path from 'path'
-import { defineLoader, type SiteConfig } from 'vitepress'
 
 export interface NavItem {
   text: string
@@ -11,10 +10,8 @@ export interface NavItem {
 // 直接生成导航数据
 console.log('🚀 开始生成导航数据...')
 const docsRoot = 'docs'  // 相对于当前目录
-console.log('📁 docs根目录:', docsRoot)
 
 const data: NavItem[] = generateNav(docsRoot)
-console.log('✅ 导航数据生成完成:', JSON.stringify(data, null, 2))
 export { data }
 
 function generateNav(directory: string): NavItem[] {
