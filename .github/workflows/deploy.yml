@@ -48,7 +48,7 @@ jobs:
           # 使用我们之前配置的部署密钥
           deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
           # 部署到的目标仓库
-          external_repository: voidfeng/voidfeng.github.io # 替换成你自己的
+          external_repository: voidvon/voidvon.github.io # 替换成你自己的
           # 部署的目标分支
           publish_branch: main # 或者 master
           # 需要部署的文件夹
