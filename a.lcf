@@ -1,0 +1,210 @@
+# Loon tvOS配置 - 此配置文件专为 tvOS 设备编写，部分策略组会自动选择网络时延最低的代理服务器，另一些则需要你手动选择服务器。
+# Date: 2025-11-08 00:21:37
+# Author: https://t.me/iKeLee
+
+[General]
+ip-mode=v4-only
+ipv6-vif=off
+dns-server=system
+sni-sniffing=true
+disable-stun=true
+dns-reject-mode=LoopbackIP
+domain-reject-mode=DNS
+udp-fallback-mode=REJECT
+wifi-access-http-port=7222
+wifi-access-socks5-port=7221
+allow-wifi-access=false
+interface-mode=auto
+test-timeout=5
+disconnect-on-policy-change=false
+internet-test-url=http://connectivitycheck.platform.hicloud.com/generate_204
+proxy-test-url=http://www.gstatic.com/generate_204
+resource-parser=https://raw.githubusercontent.com/sub-store-org/Sub-Store/release/sub-store-parser.loon.min.js
+geoip-url=https://geodata.kelee.one/Country-Masaiki.mmdb
+ipasn-url=https://geodata.kelee.one/GeoLite2-ASN-P3TERX.mmdb
+skip-proxy=192.168.0.0/16, 10.0.0.0/8, 172.16.0.0/12, localhost, *.local, e.crashlynatics.com
+bypass-tun=10.0.0.0/8, 100.64.0.0/10, 127.0.0.0/8, 169.254.0.0/16, 172.16.0.0/12, 192.0.0.0/24, 192.0.2.0/24, 192.88.99.0/24, 192.168.0.0/16, 198.51.100.0/24, 203.0.113.0/24, 224.0.0.0/4, 255.255.255.255/32
+
+[Proxy]
+
+🇭🇰 【亚洲】香港01丨直连 = Hysteria2,hk02.poke-mon.xyz,20000,"b70138a8-bfef-40cd-b087-381383991cd4",sni=www.bing.com,download-bandwidth=100,skip-cert-verify=false,fast-open=false,udp=true
+🇭🇰 【亚洲】香港02丨直连 = Hysteria2,hk02.poke-mon.xyz,20000,"b70138a8-bfef-40cd-b087-381383991cd4",sni=www.bing.com,download-bandwidth=100,skip-cert-verify=false,fast-open=false,udp=true
+🇭🇰 【亚洲】香港03丨直连 = Hysteria2,hk02.poke-mon.xyz,20000,"b70138a8-bfef-40cd-b087-381383991cd4",sni=www.bing.com,download-bandwidth=100,skip-cert-verify=false,fast-open=false,udp=true
+🇭🇰 【亚洲】香港04丨直连 = Hysteria2,hk01.poke-mon.xyz,20000,"b70138a8-bfef-40cd-b087-381383991cd4",sni=www.apple.com,download-bandwidth=100,skip-cert-verify=false,fast-open=false,udp=true
+🇭🇰 【亚洲】香港05丨直连 = Hysteria2,hk01.poke-mon.xyz,20000,"b70138a8-bfef-40cd-b087-381383991cd4",sni=www.apple.com,download-bandwidth=100,skip-cert-verify=false,fast-open=false,udp=true
+🇹🇼 【亚洲】台湾家宽01丨直连 = Hysteria2,tw01.poke-mon.xyz,20000,"b70138a8-bfef-40cd-b087-381383991cd4",sni=www.bing.com,download-bandwidth=100,skip-cert-verify=false,fast-open=false,udp=true
+🇹🇼 【亚洲】台湾家宽02丨直连 = Hysteria2,tw01.poke-mon.xyz,20000,"b70138a8-bfef-40cd-b087-381383991cd4",sni=www.bing.com,download-bandwidth=100,skip-cert-verify=false,fast-open=false,udp=true
+🇯🇵 【亚洲】日本三网06丨直连【2x】 = Hysteria2,jp03.poke-mon.xyz,443,"b70138a8-bfef-40cd-b087-381383991cd4",sni=www.bing.com,download-bandwidth=100,skip-cert-verify=false,fast-open=false,udp=true
+🇯🇵 【亚洲】日本三网07丨直连【2x】 = Hysteria2,jp03.poke-mon.xyz,443,"b70138a8-bfef-40cd-b087-381383991cd4",sni=www.bing.com,download-bandwidth=100,skip-cert-verify=false,fast-open=false,udp=true
+🇯🇵 【亚洲】日本三网08丨直连【2x】 = Hysteria2,jp03.poke-mon.xyz,443,"b70138a8-bfef-40cd-b087-381383991cd4",sni=www.bing.com,download-bandwidth=100,skip-cert-verify=false,fast-open=false,udp=true
+🇺🇸 【北美洲】美国01丨直连 = Hysteria2,us01zl.poke-mon.xyz,443,"b70138a8-bfef-40cd-b087-381383991cd4",sni=bing.com,download-bandwidth=100,skip-cert-verify=false,fast-open=false,udp=true
+🇺🇸 【北美洲】美国02丨直连 = Hysteria2,us01zl.poke-mon.xyz,443,"b70138a8-bfef-40cd-b087-381383991cd4",sni=bing.com,download-bandwidth=100,skip-cert-verify=false,fast-open=false,udp=true
+🇺🇸 【北美洲】美国03原生丨直连【2x】 = Hysteria2,us02zl.poke-mon.xyz,20000,"b70138a8-bfef-40cd-b087-381383991cd4",sni=bing.com,download-bandwidth=100,skip-cert-verify=false,fast-open=false,udp=true
+🇺🇸 【北美洲】美国04原生丨直连【2x】 = Hysteria2,us02zl.poke-mon.xyz,20000,"b70138a8-bfef-40cd-b087-381383991cd4",sni=bing.com,download-bandwidth=100,skip-cert-verify=false,fast-open=false,udp=true
+🇭🇰 【亚洲】香港家宽01丨专线【3x】 = trojan,ptxl01.xsaym.com,55024,"b70138a8-bfef-40cd-b087-381383991cd4",tls-name=www.volcengine.com,skip-cert-verify=false
+🇭🇰 【亚洲】香港家宽02丨专线【3x】 = trojan,ptxl01.xsaym.com,55024,"b70138a8-bfef-40cd-b087-381383991cd4",tls-name=www.volcengine.com,skip-cert-verify=false
+🇭🇰 【亚洲】香港03丨专线【3x】 = trojan,ptxl01.xsaym.com,55035,"b70138a8-bfef-40cd-b087-381383991cd4",tls-name=www.volcengine.com,skip-cert-verify=false
+🇭🇰 【亚洲】香港04丨专线【3x】 = trojan,ptxl01.xsaym.com,55035,"b70138a8-bfef-40cd-b087-381383991cd4",tls-name=www.volcengine.com,skip-cert-verify=false
+🇭🇰 【亚洲】香港07丨 IPLC【10x】 = trojan,ptxl02.xsaym.com,32036,"b70138a8-bfef-40cd-b087-381383991cd4",tls-name=www.volcengine.com,skip-cert-verify=false
+🇭🇰 【亚洲】香港08丨 IPLC【10x】 = trojan,ptxl02.xsaym.com,32036,"b70138a8-bfef-40cd-b087-381383991cd4",tls-name=www.volcengine.com,skip-cert-verify=false
+🇭🇰 【亚洲】香港01丨AWS【2x】 = Shadowsocks,hkbgp.xsaym.com,54257,2022-blake3-aes-128-gcm,"MjA0YzgwZjBlM2ZkNmRlNA==:YjcwMTM4YTgtYmZlZi00MA=="
+🇭🇰 【亚洲】香港02丨AWS【2x】 = Shadowsocks,hkbgp.xsaym.com,54257,2022-blake3-aes-128-gcm,"MjA0YzgwZjBlM2ZkNmRlNA==:YjcwMTM4YTgtYmZlZi00MA=="
+🇭🇰 【亚洲】香港01丨V6【1x】 = trojan,v601.xsaym.com,54357,"b70138a8-bfef-40cd-b087-381383991cd4",tls-name=www.volcengine.com,skip-cert-verify=false
+🇭🇰 【亚洲】香港02丨V6【1x】 = trojan,v602.xsaym.com,54357,"b70138a8-bfef-40cd-b087-381383991cd4",tls-name=www.volcengine.com,skip-cert-verify=false
+🇸🇬 【亚洲】新加坡01丨专线【3x】 = trojan,ptxl01.xsaym.com,55016,"b70138a8-bfef-40cd-b087-381383991cd4",tls-name=www.volcengine.com,skip-cert-verify=false
+🇸🇬 【亚洲】新加坡02丨专线【3x】 = trojan,ptxl01.xsaym.com,55016,"b70138a8-bfef-40cd-b087-381383991cd4",tls-name=www.volcengine.com,skip-cert-verify=false
+🇸🇬 【亚洲】新加坡03丨专线【3x】 = trojan,ptxl01.xsaym.com,55015,"b70138a8-bfef-40cd-b087-381383991cd4",tls-name=www.volcengine.com,skip-cert-verify=false
+🇸🇬 【亚洲】新加坡04丨专线【3x】 = trojan,ptxl01.xsaym.com,55015,"b70138a8-bfef-40cd-b087-381383991cd4",tls-name=www.volcengine.com,skip-cert-verify=false
+🇸🇬 【亚洲】新加坡05丨AWS【2x】 = Shadowsocks,hkbgp.xsaym.com,54258,2022-blake3-aes-128-gcm,"MjA0YzgwZjBlM2ZkNmRlNA==:YjcwMTM4YTgtYmZlZi00MA=="
+🇸🇬 【亚洲】新加坡06丨AWS【2x】 = Shadowsocks,hkbgp.xsaym.com,54258,2022-blake3-aes-128-gcm,"MjA0YzgwZjBlM2ZkNmRlNA==:YjcwMTM4YTgtYmZlZi00MA=="
+🇸🇬 【亚洲】新加坡07丨V6【1x】 = Shadowsocks,v601.xsaym.com,54258,2022-blake3-aes-128-gcm,"MjA0YzgwZjBlM2ZkNmRlNA==:YjcwMTM4YTgtYmZlZi00MA=="
+🇸🇬 【亚洲】新加坡08丨V6【1x】 = Shadowsocks,v602.xsaym.com,54258,2022-blake3-aes-128-gcm,"MjA0YzgwZjBlM2ZkNmRlNA==:YjcwMTM4YTgtYmZlZi00MA=="
+🇸🇬 【亚洲】新加坡09丨IPLC【10x】 = trojan,ptxl02.xsaym.com,55017,"b70138a8-bfef-40cd-b087-381383991cd4",tls-name=www.volcengine.com,skip-cert-verify=false
+🇸🇬 【亚洲】新加坡10丨IPLC【10x】 = trojan,ptxl02.xsaym.com,55017,"b70138a8-bfef-40cd-b087-381383991cd4",tls-name=www.volcengine.com,skip-cert-verify=false
+🇯🇵 【亚洲】日本01丨专线【3x】 = trojan,ptxl01.xsaym.com,54225,"b70138a8-bfef-40cd-b087-381383991cd4",tls-name=www.volcengine.com,skip-cert-verify=false
+🇯🇵 【亚洲】日本02丨专线【3x】 = trojan,ptxl01.xsaym.com,54225,"b70138a8-bfef-40cd-b087-381383991cd4",tls-name=www.volcengine.com,skip-cert-verify=false
+🇯🇵 【亚洲】日本03丨专线【3x】 = trojan,ptxl01.xsaym.com,54032,"b70138a8-bfef-40cd-b087-381383991cd4",tls-name=www.volcengine.com,skip-cert-verify=false
+🇯🇵 【亚洲】日本04丨专线【3x】 = trojan,ptxl01.xsaym.com,54032,"b70138a8-bfef-40cd-b087-381383991cd4",tls-name=www.volcengine.com,skip-cert-verify=false
+🇯🇵 【亚洲】日本家宽01丨专线【3x】 = trojan,ptxl01.xsaym.com,3499,"b70138a8-bfef-40cd-b087-381383991cd4",tls-name=www.volcengine.com,skip-cert-verify=false
+🇯🇵 【亚洲】日本家宽02丨专线【3x】 = trojan,ptxl01.xsaym.com,3499,"b70138a8-bfef-40cd-b087-381383991cd4",tls-name=www.volcengine.com,skip-cert-verify=false
+🇯🇵 【亚洲】日本05丨AWS【2x】 = Shadowsocks,hkbgp.xsaym.com,54261,2022-blake3-aes-128-gcm,"MjA0YzgwZjBlM2ZkNmRlNA==:YjcwMTM4YTgtYmZlZi00MA=="
+🇯🇵 【亚洲】日本06丨AWS【2x】 = Shadowsocks,hkbgp.xsaym.com,54261,2022-blake3-aes-128-gcm,"MjA0YzgwZjBlM2ZkNmRlNA==:YjcwMTM4YTgtYmZlZi00MA=="
+🇯🇵 【亚洲】日本07丨V6【1x】 = Shadowsocks,v601.xsaym.com,54261,2022-blake3-aes-128-gcm,"MjA0YzgwZjBlM2ZkNmRlNA==:YjcwMTM4YTgtYmZlZi00MA=="
+🇯🇵 【亚洲】日本08丨V6【1x】 = Shadowsocks,v601.xsaym.com,54261,2022-blake3-aes-128-gcm,"MjA0YzgwZjBlM2ZkNmRlNA==:YjcwMTM4YTgtYmZlZi00MA=="
+🇯🇵 【亚洲】日本09丨IPLC游戏专线【10x】 = trojan,ptxl02.xsaym.com,54029,"b70138a8-bfef-40cd-b087-381383991cd4",tls-name=www.volcengine.com,skip-cert-verify=false
+🇯🇵 【亚洲】日本10丨IPLC游戏专线【10x】 = trojan,ptxl02.xsaym.com,54029,"b70138a8-bfef-40cd-b087-381383991cd4",tls-name=www.volcengine.com,skip-cert-verify=false
+🇹🇼 【亚洲】台湾家宽01丨专线【3x】 = trojan,ptxl01.xsaym.com,54011,"b70138a8-bfef-40cd-b087-381383991cd4",tls-name=www.volcengine.com,skip-cert-verify=false
+🇹🇼 【亚洲】台湾家宽02丨专线【3x】 = trojan,ptxl01.xsaym.com,54011,"b70138a8-bfef-40cd-b087-381383991cd4",tls-name=www.volcengine.com,skip-cert-verify=false
+🇹🇼 【亚洲】台湾家宽01丨AWS【3x】 = Shadowsocks,hkbgp.xsaym.com,54259,2022-blake3-aes-128-gcm,"MjA0YzgwZjBlM2ZkNmRlNA==:YjcwMTM4YTgtYmZlZi00MA=="
+🇹🇼 【亚洲】台湾家宽04丨IEPL【8x】 = trojan,ptxl02.xsaym.com,54144,"b70138a8-bfef-40cd-b087-381383991cd4",tls-name=www.volcengine.com,skip-cert-verify=false
+🇰🇷 【亚洲】韩国家宽01丨专线【6x】 = trojan,ptxl01.xsaym.com,59110,"b70138a8-bfef-40cd-b087-381383991cd4",tls-name=www.volcengine.com,skip-cert-verify=false
+🇰🇷 【亚洲】韩国家宽02丨专线【6x】 = trojan,ptxl01.xsaym.com,59099,"b70138a8-bfef-40cd-b087-381383991cd4",tls-name=www.volcengine.com,skip-cert-verify=false
+🇰🇷 【亚洲】韩国家宽01丨AWS【3x】 = Shadowsocks,hkbgp.xsaym.com,54265,2022-blake3-aes-128-gcm,"MjA0YzgwZjBlM2ZkNmRlNA==:YjcwMTM4YTgtYmZlZi00MA=="
+🇺🇸 【北美洲】美国01丨专线【3x】 = trojan,c1b4d63d-dc49-4c52-b0bf-e900ca959e36.xsaym.com,56115,"b70138a8-bfef-40cd-b087-381383991cd4",tls-name=www.volcengine.com,skip-cert-verify=false
+🇺🇸 【北美洲】美国02丨专线【3x】 = trojan,c1b4d63d-dc49-4c52-b0bf-e900ca959e36.xsaym.com,56115,"b70138a8-bfef-40cd-b087-381383991cd4",tls-name=www.volcengine.com,skip-cert-verify=false
+🇺🇸 【北美洲】美国03丨专线【3x】 = trojan,c1b4d63d-dc49-4c52-b0bf-e900ca959e36.xsaym.com,56017,"b70138a8-bfef-40cd-b087-381383991cd4",tls-name=www.volcengine.com,skip-cert-verify=false
+🇺🇸 【北美洲】美国04丨专线【3x】 = trojan,c1b4d63d-dc49-4c52-b0bf-e900ca959e36.xsaym.com,56017,"b70138a8-bfef-40cd-b087-381383991cd4",tls-name=www.volcengine.com,skip-cert-verify=false
+🇺🇸 【北美洲】美国01丨AWS【2x】 = Shadowsocks,hkbgp.xsaym.com,54263,2022-blake3-aes-128-gcm,"MjA0YzgwZjBlM2ZkNmRlNA==:YjcwMTM4YTgtYmZlZi00MA=="
+🇺🇸 【北美洲】美国02丨AWS【2x】 = Shadowsocks,hkbgp.xsaym.com,54263,2022-blake3-aes-128-gcm,"MjA0YzgwZjBlM2ZkNmRlNA==:YjcwMTM4YTgtYmZlZi00MA=="
+🇺🇸 【北美洲】美国03丨V6【1x】 = Shadowsocks,v601.xsaym.com,54273,2022-blake3-aes-128-gcm,"MjA0YzgwZjBlM2ZkNmRlNA==:YjcwMTM4YTgtYmZlZi00MA=="
+🇺🇸 【北美洲】美国04丨V6【1x】 = Shadowsocks,v601.xsaym.com,54273,2022-blake3-aes-128-gcm,"MjA0YzgwZjBlM2ZkNmRlNA==:YjcwMTM4YTgtYmZlZi00MA=="
+🇺🇸 【北美洲】美国05丨IPLC【10x】 = trojan,ptxl02.xsaym.com,56019,"b70138a8-bfef-40cd-b087-381383991cd4",tls-name=www.volcengine.com,skip-cert-verify=false
+🇺🇸 【北美洲】美国06丨IPLC【10x】 = trojan,ptxl02.xsaym.com,56019,"b70138a8-bfef-40cd-b087-381383991cd4",tls-name=www.volcengine.com,skip-cert-verify=false
+🇺🇸 【北美洲】加拿大【3x】 = trojan,ptxl01.xsaym.com,59025,"b70138a8-bfef-40cd-b087-381383991cd4",tls-name=www.volcengine.com,skip-cert-verify=false
+🇲🇴 【亚洲】澳门【8x】 = trojan,ptxl01.xsaym.com,59010,"b70138a8-bfef-40cd-b087-381383991cd4",tls-name=www.volcengine.com,skip-cert-verify=false
+🇦🇺 【大洋洲】澳大利亚【3x】 = trojan,ptxl01.xsaym.com,59115,"b70138a8-bfef-40cd-b087-381383991cd4",tls-name=www.volcengine.com,skip-cert-verify=false
+🇸🇬 【大洋洲】新西兰【10x】 = trojan,ptxl01.xsaym.com,59020,"b70138a8-bfef-40cd-b087-381383991cd4",tls-name=www.volcengine.com,skip-cert-verify=false
+🇪🇺 【欧洲】英国01【3x】 = trojan,ptxl03.xsaym.com,56006,"b70138a8-bfef-40cd-b087-381383991cd4",tls-name=www.volcengine.com,skip-cert-verify=false
+🇪🇺 【欧洲】英国02【3x】 = trojan,ptxl03.xsaym.com,56007,"b70138a8-bfef-40cd-b087-381383991cd4",tls-name=www.volcengine.com,skip-cert-verify=false
+🇩🇪 【欧洲】德国01【3x】 = trojan,ptxl01.xsaym.com,59023,"b70138a8-bfef-40cd-b087-381383991cd4",tls-name=www.volcengine.com,skip-cert-verify=false
+🇪🇺 【欧洲】法国【3x】 = trojan,ptxl01.xsaym.com,59022,"b70138a8-bfef-40cd-b087-381383991cd4",tls-name=www.volcengine.com,skip-cert-verify=false
+🇪🇺 【欧洲】意大利【3x】 = trojan,ptxl01.xsaym.com,59028,"b70138a8-bfef-40cd-b087-381383991cd4",tls-name=www.volcengine.com,skip-cert-verify=false
+🇪🇺 【欧洲】俄罗斯【3x】 = trojan,eluosi.xsaym.com,59032,"b70138a8-bfef-40cd-b087-381383991cd4",tls-name=www.volcengine.com,skip-cert-verify=false
+🇪🇺 【欧洲】荷兰【3x】 = trojan,ptxl01.xsaym.com,48111,"b70138a8-bfef-40cd-b087-381383991cd4",tls-name=www.volcengine.com,skip-cert-verify=false
+🇪🇺 【欧洲】乌克兰【3x】 = trojan,ptxl01.xsaym.com,48113,"b70138a8-bfef-40cd-b087-381383991cd4",tls-name=www.volcengine.com,skip-cert-verify=false
+🇪🇺 【欧洲】波兰原生【3x】 = trojan,ptxl01.xsaym.com,59017,"b70138a8-bfef-40cd-b087-381383991cd4",tls-name=www.volcengine.com,skip-cert-verify=false
+🇨🇭 【欧洲】瑞士【3x】 = trojan,ptxl01.xsaym.com,48031,"b70138a8-bfef-40cd-b087-381383991cd4",tls-name=www.volcengine.com,skip-cert-verify=false
+🇻🇳 【东南亚】越南【3x】 = trojan,ptxl01.xsaym.com,59006,"b70138a8-bfef-40cd-b087-381383991cd4",tls-name=www.volcengine.com,skip-cert-verify=false
+🇹🇭 【东南亚】泰国【3x】 = trojan,ptxl01.xsaym.com,59114,"b70138a8-bfef-40cd-b087-381383991cd4",tls-name=www.volcengine.com,skip-cert-verify=false
+🇵🇭 【东南亚】菲律宾【3x】 = trojan,feilvbin.xsaym.com,59005,"b70138a8-bfef-40cd-b087-381383991cd4",tls-name=www.volcengine.com,skip-cert-verify=false
+🇲🇾 【东南亚】马来西亚丨原生【6x】 = trojan,ptxl01.xsaym.com,59027,"b70138a8-bfef-40cd-b087-381383991cd4",tls-name=www.volcengine.com,skip-cert-verify=false
+🇮🇩 【东南亚】印度尼西亚【3x】 = trojan,ptxl01.xsaym.com,59111,"b70138a8-bfef-40cd-b087-381383991cd4",tls-name=www.volcengine.com,skip-cert-verify=false
+🇰🇭 【东南亚】柬埔寨【3x】 = trojan,ptxl01.xsaym.com,59048,"b70138a8-bfef-40cd-b087-381383991cd4",tls-name=www.volcengine.com,skip-cert-verify=false
+🇹🇷 【中东】土耳其-原生【3x】 = trojan,ptxl03.xsaym.com,59007,"b70138a8-bfef-40cd-b087-381383991cd4",tls-name=www.volcengine.com,skip-cert-verify=false
+🇰🇿 【中亚】哈萨克斯坦【4x】 = trojan,ptxl01.xsaym.com,59117,"b70138a8-bfef-40cd-b087-381383991cd4",tls-name=www.volcengine.com,skip-cert-verify=false
+🇸🇦 【中东】沙特阿拉伯【3x】 = trojan,ptxl01.xsaym.com,59044,"b70138a8-bfef-40cd-b087-381383991cd4",tls-name=www.volcengine.com,skip-cert-verify=false
+🇺🇸 【南美洲】巴西【3x】 = trojan,ptxl01.xsaym.com,59214,"b70138a8-bfef-40cd-b087-381383991cd4",tls-name=www.volcengine.com,skip-cert-verify=false
+🇺🇸 【南美洲】阿根廷原生【6x】 = trojan,ptxl01.xsaym.com,59019,"b70138a8-bfef-40cd-b087-381383991cd4",tls-name=www.volcengine.com,skip-cert-verify=false
+🇺🇸 【南美洲】秘鲁【3x】 = trojan,ptxl01.xsaym.com,59021,"b70138a8-bfef-40cd-b087-381383991cd4",tls-name=www.volcengine.com,skip-cert-verify=false
+🇪🇺 【欧洲】冰岛【3x】 = trojan,ptxl01.xsaym.com,59081,"b70138a8-bfef-40cd-b087-381383991cd4",tls-name=www.volcengine.com,skip-cert-verify=false
+🇪🇸 【欧洲】西班牙【3x】 = trojan,ptxl01.xsaym.com,59116,"b70138a8-bfef-40cd-b087-381383991cd4",tls-name=www.volcengine.com,skip-cert-verify=false
+🇦🇹 【欧洲】奥地利【3x】 = trojan,ptxl01.xsaym.com,59046,"b70138a8-bfef-40cd-b087-381383991cd4",tls-name=www.volcengine.com,skip-cert-verify=false
+🇨🇿 【欧洲】捷克【3x】 = trojan,ptxl01.xsaym.com,59047,"b70138a8-bfef-40cd-b087-381383991cd4",tls-name=www.volcengine.com,skip-cert-verify=false
+🇮🇳 【南亚洲】印度【3x】 = trojan,ptxl01.xsaym.com,59009,"b70138a8-bfef-40cd-b087-381383991cd4",tls-name=www.volcengine.com,skip-cert-verify=false
+🇳🇬 【非洲】尼日利亚【3x】 = trojan,ptxl01.xsaym.com,59013,"b70138a8-bfef-40cd-b087-381383991cd4",tls-name=www.volcengine.com,skip-cert-verify=false
+🇿🇦 【非洲】南非约翰内斯堡【6x】 = trojan,ptxl01.xsaym.com,59045,"b70138a8-bfef-40cd-b087-381383991cd4",tls-name=www.volcengine.com,skip-cert-verify=false
+🇺🇸 【北美洲】墨西哥丨家宽【6x】 = trojan,ptxl03.xsaym.com,50120,"b70138a8-bfef-40cd-b087-381383991cd4",tls-name=www.volcengine.com,skip-cert-verify=false
+
+[Remote Proxy]
+
+[Remote Filter]
+香港节点=NameRegex, FilterKey="^(?=.*((?i)🇭🇰|香港|(\b(HK|HKG|Hong)(\d+)?\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$"
+台湾节点=NameRegex, FilterKey="^(?=.*((?i)🇹🇼|台湾|(\b(TW|TWN|Tai|Taiwan)(\d+)?\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$"
+日本节点=NameRegex, FilterKey="^(?=.*((?i)🇯🇵|日本|川日|东京|大阪|泉日|埼玉|(\b(JP|JPN|Japan)(\d+)?\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$"
+韩国节点=NameRegex, FilterKey="^(?=.*((?i)🇰🇷|韩国|韓|首尔|(\b(KR|KOR|Korea)(\d+)?\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$"
+新国节点=NameRegex, FilterKey="^(?=.*((?i)🇸🇬|新加坡|狮|(\b(SG|SGP|Singapore)(\d+)?\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$"
+美国节点=NameRegex, FilterKey="^(?=.*((?i)🇺🇸|美国|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|(\b(US|USA|United States)(\d+)?\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$"
+游戏节点=NameRegex, FilterKey="^(?=.*((?i)游戏|🎮|(\b(GAME)(\d+)?\b)))(?!.*((?i)回国|校园)).*$"
+全球节点=NameRegex, FilterKey="^(?=.*(.))(?!.*((?i)群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|超时|收藏|福利|邀请|好友|失联|(\b(USE|USED|TOTAL|EXPIRE|EMAIL|Panel|Channel|Author|Traffic)(\d+)?\b|(\d{4}-\d{2}-\d{2}|\dG)))).*$"
+
+[Proxy Group]
+# 手动策略组
+AI=select, 全球节点, img-url=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/ChatGPT.png
+Speedtest Intl=select, 全球节点, img-url=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/OoklaSpeedtest.png
+TikTok=select, 全球节点, img-url=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/TikTok.png
+Netflix=select, 全球节点, img-url=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/Netflix.png
+Disney=select, 全球节点, img-url=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/Disney+.png
+Prime Video=select, 全球节点, img-url=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/PrimeVideo.png
+Discovery Plus=select, 全球节点, img-url=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/Discovery+.png
+YouTube=select, 香港时延优选, 台湾时延优选, 日本时延优选, 韩国时延优选, 新国时延优选, 美国时延优选, img-url=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/YouTube.png
+Telegram=select, 香港时延优选, 台湾时延优选, 日本时延优选, 韩国时延优选, 新国时延优选, 美国时延优选, img-url=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/Telegram.png
+Apple Account=select, DIRECT, 香港时延优选, 台湾时延优选, 日本时延优选, 韩国时延优选, 新国时延优选, 美国时延优选, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/Apple.png
+App Store=select, DIRECT, 香港时延优选, 台湾时延优选, 日本时延优选, 韩国时延优选, 新国时延优选, 美国时延优选, img-url=https://raw.githubusercontent.com/luestr/IconResource/main/Other_icon/120px/AppStore.png
+国内下载CDN=select, DIRECT, 全球节点, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/China_Map.png
+国际下载CDN=select, DIRECT, 全球节点, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Europe_Map.png
+游戏手动=select, 游戏节点, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Game.png
+全球手动=select, 全球节点, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/Global.png
+# --------------------------------
+# 时延优选策略组
+香港时延优选=url-test, 香港节点, interval=60, tolerance=20, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/HK.png
+台湾时延优选=url-test, 台湾节点, interval=60, tolerance=20, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/TW.png
+日本时延优选=url-test, 日本节点, interval=60, tolerance=20, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/JP.png
+韩国时延优选=url-test, 韩国节点, interval=60, tolerance=20, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/KR.png
+新国时延优选=url-test, 新国节点, interval=60, tolerance=20, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/SG.png
+美国时延优选=url-test, 美国节点, interval=60, tolerance=20, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/US.png
+# --------------------------------
+# 兜底策略后备
+兜底后备策略=fallback, 香港时延优选, 台湾时延优选, 日本时延优选, 韩国时延优选, 新国时延优选, 美国时延优选, interval=60, max-timeout=2000, img-url=https://github.com/shindgewongxj/WHATSINStash/raw/main/icon/fallback.png
+# --------------------------------
+
+[Rule]
+# 当配置文件中没有任何有效策略组时，Loon将使用内置的PROXY策略组
+# 当配置文件中存在有效的策略组时，内置的PROXY策略组将不再允许被调用，仅可使用用户配置的策略组
+# 配置文件已自带远程GEOIP, cn, DIRECT规则，请勿在此添加
+# 请勿修改远程CN REGION规则的排序甚至删除
+FINAL, 兜底后备策略
+
+[Remote Rule]
+https://kelee.one/Tool/Loon/Lsr/AI.lsr, policy=AI, tag=AI, enabled=true
+https://kelee.one/Tool/Loon/Lsr/SpeedtestInternational.lsr, policy=Speedtest Intl, tag=Speedtest Intl, enabled=true
+https://kelee.one/Tool/Loon/Lsr/TikTok.lsr, policy=TikTok, tag=TikTok, enabled=true
+https://rule.kelee.one/Loon/YouTube.lsr, policy=YouTube, tag=Youtube, enabled=true
+https://rule.kelee.one/Loon/Netflix.lsr, policy=Netflix, tag=Netflix, enabled=true
+https://rule.kelee.one/Loon/Disney.lsr, policy=Disney, tag=Disney, enabled=true
+https://rule.kelee.one/Loon/PrimeVideo.lsr, policy=Prime Video, tag=Prime Video, enabled=true
+https://rule.kelee.one/Loon/DiscoveryPlus.lsr, policy=Discovery Plus, tag=Discovery Plus, enabled=true
+https://kelee.one/Tool/Loon/Lsr/Telegram.lsr, policy=Telegram, tag=Telegram, enabled=true
+https://kelee.one/Tool/Loon/Lsr/AppleAccount.lsr, policy=Apple Account, tag=Apple Account, enabled=true
+https://kelee.one/Tool/Loon/Lsr/AppStore.lsr, policy=App Store, tag=App Store, enabled=true
+https://rule.kelee.one/Loon/GitHub.lsr, policy=兜底后备策略, tag=GitHub, enabled=true
+https://rule.kelee.one/Loon/Google.lsr, policy=兜底后备策略, tag=Google, enabled=true
+https://rule.kelee.one/Loon/OneDrive.lsr, policy=兜底后备策略, tag=OneDrive, enabled=true
+https://kelee.one/Tool/Loon/Lsr/ChinaDownloadCDN.lsr, policy=国内下载CDN, tag=国内下载CDN, enabled=true
+https://kelee.one/Tool/Loon/Lsr/InternationalDownloadCDN.lsr, policy=国际下载CDN, tag=国际下载CDN, enabled=true
+https://kelee.one/Tool/Loon/Lsr/LAN_SPLITTER.lsr, policy=DIRECT, tag=LAN, enabled=true
+https://kelee.one/Tool/Loon/Lsr/REGION_SPLITTER.lsr, policy=DIRECT, tag=CN REGION, enabled=true
+
+[Host]
+
+[Rewrite]
+
+[Script]
+
+[Plugin]
+https://kelee.one/Tool/Loon/Lpx/TestFlightRegionUnlock.lpx, policy=DIRECT, enabled=false
+
+[Mitm]
+hostname=
+ca-p12=
+ca-passphrase=
+skip-server-cert-verify=false
