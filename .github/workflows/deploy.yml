@@ -1,59 +1,66 @@
-# 工作流名称
-name: Build and Deploy to GitHub Pages
+name: Deploy VitePress site to Pages
 
-# 触发条件：当代码推送到 main 分支时触发
 on:
+  # 在推送到 main 分支时触发部署。如果你的默认分支叫 master，请将其改为 master。
   push:
     branches:
-      - main # 或者 master，根据你的主分支名称修改
+      - main
+  # 允许你从 GitHub Actions 页面手动触发部署
+  workflow_dispatch:
 
-# 权限设置：允许此工作流写入内容
+# 设置 GITHUB_TOKEN 的权限，以允许部署到 GitHub Pages
 permissions:
-  contents: write
+  contents: read
+  pages: write
+  id-token: write
 
-# 任务（Jobs）
+# 只允许同时进行一次部署，跳过正在运行和最新排队之间的运行队列
+# 但是，不要取消正在进行的运行，因为我们希望允许这些生产部署完成
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
 jobs:
-  build-and-deploy:
-    # 运行环境：使用最新的 Ubuntu
+  # 构建工作
+  build:
     runs-on: ubuntu-latest
-
-    # 步骤（Steps）
     steps:
-      # 步骤一：检出源代码
-      # 使用 actions/checkout@v4 拉取你的代码到 Actions 运行器中
-      - name: Checkout 🛎️
+      - name: Checkout
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # 如果启用了 lastUpdated，需要获取完整的提交历史
 
-      # 步骤二：安装和配置 Node.js 环境
-      # 根据你的项目使用的 Node.js 版本进行修改
-      - name: Setup Node.js 🟩
+      - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: "22" # 建议使用LTS版本，如 18, 20
-          cache: "npm" # 或者 yarn, pnpm
+          node-version: "24"
+          cache: npm # 如果你使用的是 pnpm 或 yarn，请将这里改为 pnpm 或 yarn
 
-      # 步骤三：安装项目依赖
-      - name: Install dependencies 👨🏻‍💻
-        run: npm install # 如果你用 yarn, 就是 yarn install; 如果用 pnpm, 就是 pnpm install
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
 
-      # 步骤四：执行构建脚本
-      # Vue/Vite 项目默认是 npm run build，会生成 dist 文件夹
-      - name: Build 🔨
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build with VitePress
+        # 确保你的 package.json 中有这个脚本命令
         run: npm run build
 
-      # 步骤五：部署到 voidfeng.github.io
-      - name: Deploy 🚀
-        uses: peaceiris/actions-gh-pages@v4
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
         with:
-          # 使用我们之前配置的部署密钥
-          deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
-          # 部署到的目标仓库
-          external_repository: voidvon/voidvon.github.io # 替换成你自己的
-          # 部署的目标分支
-          publish_branch: main # 或者 master
-          # 需要部署的文件夹
-          publish_dir: ./dist
-          # 提交信息
-          commit_message: ${{ github.event.head_commit.message }} # 使用源代码仓库的提交信息
-          # 防止旧文件残留
-          cname: "" # 如果你有自定义域名，请填写在这里，例如 docs.example.com
+          # VitePress 构建的默认输出目录
+          path: ./dist
+
+  # 部署工作
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    needs: build
+    runs-on: ubuntu-latest
+    name: Deploy
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
